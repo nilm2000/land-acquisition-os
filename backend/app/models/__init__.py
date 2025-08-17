@@ -1,9 +1,7 @@
 # app/models/__init__.py
-from app.database import Base  # re-export Base for create_all
-from .user import User
-# import the rest so metadata is complete:
-# from .parcel import Parcel
-# from .project import Project
-# from .filter import Filter
-# from .audit_log import AuditLog
+from .user import User, UserRole
+from .parcel import Parcel
+from .audit_log import AuditLog
+
+__all__ = ["User", "UserRole", "Parcel", "AuditLog"]
 
